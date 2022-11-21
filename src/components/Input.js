@@ -1,9 +1,9 @@
-import React from "react";
+// import React, { component } from "react";
 
 function Input() {
   return (
     <div>
-      <input type="text" id="fname" name="fname"></input>
+      <input type="text" className="input-name"></input>
     </div>
   );
 }

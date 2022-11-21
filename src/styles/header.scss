@@ -1,0 +1,26 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+body{
+    background-color: rgb(240, 130, 130);
+    h1{
+        background-color: red;
+        color: chartreuse;
+        margin-top: 30px;
+    }
+    .input-name{
+        background-color: aqua;
+        margin-top: 30px;
+    }
+    .button-submit{
+        color: rgb(62, 19, 19);
+
+    }
+    .checkbox-todo-1{
+        color: aliceblue;
+        margin-top: 30px;
+    }
+}
