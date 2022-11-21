@@ -1,19 +1,29 @@
-import React from "react";
+import React, { useState } from "react";
 
 function Checkbox() {
-  const todos = ["Learn react", "Be awesome"];//Ds le tableau on peut rajouter des elements 
-  
+  const initialTodos = [{texte:"Learn react", check:false }, {texte: "Be awesome" , check: false}];//Ds le tableau on peut rajouter des elements 
+  const [todos, setTodos] = useState(initialTodos);
 
-  return (
-    <div>
-      {todos.map((todo)=>( 
+    return (
       <div>
-        <input type="checkbox" id="checkbox-todo-1" name="scales" />
-        <label htmlFor="scales">{todo}</label>
+        {todos.map((todo, index) => (
+          <div key={index}>
+            <input
+              type="checkbox"
+              id="checkbox-todo-1"
+              name="scales"
+              defaultChecked={todo.check}
+              onChange={()=> {
+                const newTodos = [...todos];
+                newTodos[index].check = !newTodos[index].check;
+                setTodos(newTodos); 
+              }}
+            />
+            <label htmlFor="scales">{todo.texte}</label>
+          </div>
+        ))}
       </div>
-      ))}
-    </div>  
-  );
+    );
 }
 export default Checkbox;
 
