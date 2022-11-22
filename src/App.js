@@ -1,8 +1,7 @@
-import "./App.css";
+//import "./App.css";
 import Header from "./components/Header";
 import TodoList from "./components/TodoList";
 import Form from "./components/Form";
-import "./styles/header.scss";
 import React, { useState } from "react";
 
 
