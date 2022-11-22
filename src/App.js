@@ -1,4 +1,3 @@
-// import logo from './logo.svg';
 import "./App.css";
 import Header from "./components/Header";
 import TodoList from "./components/TodoList";
@@ -18,9 +17,11 @@ function App() {
     <main className="App">
       <Header />
       <Form todos={todos} setTodoList={setTodos} />
-      <TodoList todos={todos} setTodos={setTodos} /> {/*Transfere le tableau et sa fonction dans Todolist*/}
+      <TodoList todos={todos} setTodos={setTodos} /> 
     </main>
   );
 }
+
+  /*Transfere le tableau et sa fonction dans Todolist*/
 
 export default App;
