@@ -1,15 +1,10 @@
 import React, { useState } from "react";
 
-function TodoList({initialTodos}) {
-  const initialTodos = [
-    { texte: "Learn react", check: false },
-    { texte: "Be awesome", check: false },
-  ]; //Ds le tableau on peut rajouter des elements
-  const [todos, setTodos] = useState(initialTodos);
+function TodoList(props) {
 
   return (
     <div>
-      {todos.map((todo, index) => (
+      {props.todos.map((todo, index) => (
         <div key={index}>
           <input
             type="checkbox"
@@ -17,9 +12,9 @@ function TodoList({initialTodos}) {
             name="scales"
             defaultChecked={todo.state}
             onChange={() => {
-              const newTodos = [...todos];
+              const newTodos = [...props.todos];
               newTodos[index].state = !newTodos[index].state;
-              setTodos(newTodos);
+              props.setTodos(newTodos);
             }}
           />
           <label htmlFor="scales">{todo.texte}</label>
